@@ -1,8 +1,8 @@
 <?php
 namespace PhpInsights;
 
-
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\TransferException;
 
 class InsightsCaller
 {
@@ -57,10 +57,20 @@ class InsightsCaller
      * @param string $strategy
      *
      * @return InsightsResponse
+     *
+     * @throws ApiRequestException
      */
-    public function getResponse($url, $strategy = 'mobile') {
+    public function getResponse($url, $strategy = 'mobile')
+    {
         $apiEndpoint = $this->createApiEndpointUrl($url, $strategy);
-        return InsightsResponse::fromResponse($this->client->request('GET', $apiEndpoint));
+
+        try {
+            $response = $this->client->request('GET', $apiEndpoint);
+        } catch (TransferException $e) {
+            throw new ApiRequestException($e->getMessage());
+        }
+
+        return InsightsResponse::fromResponse($response);
 
     }
 
@@ -81,7 +91,6 @@ class InsightsCaller
     }
 
 
-
     /**
      * @param string $url
      * @param string $strategy
@@ -93,7 +102,6 @@ class InsightsCaller
         $screenshot = ($this->isCaptureScreenshot()) ? 'true' : 'false';
         return sprintf(self::GI_API_ENDPOINT, $url, $strategy, $this->apiKey, $this->locale, $screenshot);
     }
-
 
 
 }

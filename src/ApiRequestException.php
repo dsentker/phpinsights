@@ -3,7 +3,7 @@ namespace PhpInsights;
 
 use PhpInsights\Result\InsightsException;
 
-class InvalidJsonException extends InsightsException
+class ApiRequestException extends InsightsException
 {
 
 }

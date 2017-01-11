@@ -10,4 +10,12 @@ class InsightsCallerTest extends TestCase
         return $this->assertInstanceOf('\PhpInsights\InsightsCaller', $caller);
 
     }
+
+    public function testInvalidApiKey()
+    {
+        $this->expectException(\PhpInsights\ApiRequestException::class);
+        $caller = new \PhpInsights\InsightsCaller('foo');
+        $caller->getResponse('foo');
+    }
+
 }
