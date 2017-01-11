@@ -1,6 +1,6 @@
 # PhpInsights
 
-An API Wrapper for [Googles PageSpeed Insights](https://developers.google.com/speed/docs/insights/v2/reference/pagespeedapi/runpagespeed). The JSON response is mapped to objects for an  headache-free usage. 
+An easy-to-use API Wrapper for [Googles PageSpeed Insights](https://developers.google.com/speed/docs/insights/v2/reference/pagespeedapi/runpagespeed). The JSON response is mapped to objects for an  headache-free usage. 
 
 ## Installation
 1. Get an api key from the google developer console for [Page Speed Insights](https://console.developers.google.com/apis/api/pagespeedonline-json.googleapis.com/overview).
@@ -47,7 +47,7 @@ foreach($result->getFormattedResults()->getRuleResults() as $rule => $ruleResult
 ### Screenshot
 ```php
 print $result->screenshot->getImageHtml(); // html image element
-print $result->screenshot->getData(); // base64 representation from screenshot
+print $result->screenshot->getData(); // base64 screenshot representation 
 ```
 
 ## Testing
