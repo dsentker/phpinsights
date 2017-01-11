@@ -20,7 +20,7 @@ var_dump($result->getUsabilityScore()); // 100
 ```
 
 ### Result details
-```
+```php
 foreach($result->getFormattedResults()->getRuleResults() as $rule => $ruleResult) {
     
     /*
@@ -44,7 +44,7 @@ foreach($result->getFormattedResults()->getRuleResults() as $rule => $ruleResult
 ```
 
 ### Screenshot
-```
+```php
 print $result->screenshot->getImageHtml(); // html image element
 print $result->screenshot->getData(); // base64 representation from screenshot
 ```
