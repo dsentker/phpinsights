@@ -1,0 +1,10 @@
+{
+    "require": {
+        "netresearch/jsonmapper": "^1.1",
+        "guzzlehttp/guzzle": "^6.2",
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {"PhpInsights\\": "vendor/phpinsights/src"}
+    }
+}
