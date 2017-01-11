@@ -1,5 +1,8 @@
 {
+    "name": "dsentker/phpinsights",
+    "description": "A php wrapper for Googles page speed insights",
     "require": {
+        "php": "^5.4 || ^7.0",
         "netresearch/jsonmapper": "^1.1",
         "guzzlehttp/guzzle": "^6.2",
         "phpunit/phpunit": "^5.7"
