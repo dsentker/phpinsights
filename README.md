@@ -50,7 +50,7 @@ print $result->screenshot->getData(); // base64 representation from screenshot
 ```
 
 ## Submitting bugs and feature requests
-Bugs and feature request are tracked on GitHub
+Bugs and feature request are tracked on GitHub.
 
 ## External Libraries
 This library depends on [JsonMapper by cweise](https://github.com/cweiske/jsonmapper) to map json fields to php objects and [Guzzle](https://github.com/guzzle/guzzle) (surprise!).

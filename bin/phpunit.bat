@@ -1,2 +1,2 @@
 @echo off
-vendor/bin/phpunit --bootstrap "D:\xampp\htdocs\test\phpinsights\src\autoload.php"
+vendor/bin/phpunit --bootstrap "src\autoload.php"
