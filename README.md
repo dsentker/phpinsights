@@ -53,7 +53,7 @@ print $result->screenshot->getData(); // base64 representation from screenshot
 Bugs and feature request are tracked on GitHub.
 
 ## External Libraries
-This library depends on [JsonMapper by cweise](https://github.com/cweiske/jsonmapper) to map json fields to php objects and [Guzzle](https://github.com/guzzle/guzzle) (surprise!).
+This library depends on [JsonMapper by cweiske](https://github.com/cweiske/jsonmapper) to map json fields to php objects and [Guzzle](https://github.com/guzzle/guzzle) (surprise!).
 
 ## Copyright and license
 PhpInsights is licensed for use under the MIT License (MIT). Please see LICENSE for more information.
