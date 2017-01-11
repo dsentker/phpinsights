@@ -50,6 +50,12 @@ print $result->screenshot->getImageHtml(); // html image element
 print $result->screenshot->getData(); // base64 representation from screenshot
 ```
 
+## Testing
+``` $ phpunit --bootstrap "path/to/phpinsights/src/autoload.php"```
+
+## Credits
+* [Daniel Sentker](https://github.com/dsentker)
+
 ## Submitting bugs and feature requests
 Bugs and feature request are tracked on GitHub.
 
