@@ -29,7 +29,7 @@ foreach($result->getFormattedResults()->getRuleResults() as $rule => $ruleResult
     if($ruleResult->getRuleImpact() > 0) {
     
         var_dump($rule); // AvoidLandingPageRedirects
-        var_dump($ruleResult->->getLocalizedRuleName()); // "Zielseiten-Weiterleitungen vermeiden"
+        var_dump($ruleResult->getLocalizedRuleName()); // "Zielseiten-Weiterleitungen vermeiden"
         
         /*
          * The getDetails() method returns is a wrapper to yield the summary field as well as urlblocks data. 
