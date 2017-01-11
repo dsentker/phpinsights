@@ -4,7 +4,8 @@ An API Wrapper for [Googles PageSpeed Insights](https://developers.google.com/sp
 
 ## Installation
 1. Get an api key from the google developer console for [Page Speed Insights](https://console.developers.google.com/apis/api/pagespeedonline-json.googleapis.com/overview).
-2. Have fun with this library.
+2. ```composer require dsentker/phpinsights```
+3. Have fun with this library.
 
 ## Usage
 
