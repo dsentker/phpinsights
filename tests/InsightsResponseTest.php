@@ -18,14 +18,7 @@ class InsightsResponseTest extends TestCase
         
     }
 
-    /**
-     * @return InsightsResult
-     */
-    protected function getMappedResult() {
-        return $this->exampleComResponse->getMappedResult();
-    }
-
-    public function testValidResponse()
+     public function testValidResponse()
     {
         $this->assertInstanceOf(InsightsResponse::class, InsightsResponse::fromResponse(new Response(200, [], '{}')));
     }
@@ -53,34 +46,7 @@ class InsightsResponseTest extends TestCase
 
     public function testMappedResult()
     {
-        $this->assertInstanceOf(InsightsResult::class, $this->getMappedResult());
-    }
-
-    public function testResponseCode()
-    {
-        $this->assertEquals(200, $this->getMappedResult()->getResponseCode());
-    }
-
-    public function testKind()
-    {
-        $this->assertEquals('pagespeedonline#result', $this->getMappedResult()->getKind());
-    }
-
-    public function testId()
-    {
-        $this->assertEquals('http://example.com/', $this->getMappedResult()->getId());
-    }
-
-    public function testScreenshot()
-    {
-        $this->assertEquals('image/jpeg', $this->getMappedResult()->getScreenshot()->getMimeType());
-    }
-
-    public function testPageStats()
-    {
-        $this->assertEquals(33, $this->getMappedResult()->getPageStats()->getTotalRequestBytes());
-        $this->assertEquals(1599, $this->getMappedResult()->getPageStats()->getHtmlResponseBytes());
-
+        $this->assertInstanceOf(InsightsResult::class, $this->exampleComResponse->getMappedResult());
     }
 
 

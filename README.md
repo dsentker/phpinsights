@@ -33,7 +33,8 @@ foreach($result->getFormattedResults()->getRuleResults() as $rule => $ruleResult
         var_dump($ruleResult->getLocalizedRuleName()); // "Zielseiten-Weiterleitungen vermeiden"
         
         /*
-         * The getDetails() method returns is a wrapper to yield the summary field as well as urlblocks data. 
+         * The getDetails() method is a wrapper to get the `summary` field as well as `Urlblocks` data. You
+         * can use $ruleResult->getUrlBlocks() and $ruleResult->getSummary() instead. 
          */
         foreach($ruleResult->getDetails() as $block) {
             var_dump($block->toString()); // "Auf Ihrer Seite sind keine Weiterleitungen vorhanden"
