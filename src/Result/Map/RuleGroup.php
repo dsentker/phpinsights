@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: MSchäfer
- * Date: 03.01.2017
- * Time: 14:58
- */
-
 namespace PhpInsights\Result\Map;
-
 
 class RuleGroup
 {
@@ -33,7 +25,5 @@ class RuleGroup
     {
         $this->score = $score;
     }
-
-
 
 }
