@@ -21,6 +21,7 @@ var_dump($result->getUsabilityScore()); // 100
 ```
 
 ### Result details
+#### Full result
 ```php
 foreach($result->getFormattedResults()->getRuleResults() as $rule => $ruleResult) {
     
@@ -42,6 +43,13 @@ foreach($result->getFormattedResults()->getRuleResults() as $rule => $ruleResult
     
     }
     
+}
+```
+#### Result details by Rule group
+```php
+/** @var \PhpInsights\Result\InsightsResult $result */
+foreach($result->getFormattedResults()->getRuleResultsByGroup(RuleGroup::GROUP_SPEED) as $rule => $ruleResult) {
+    $ruleResult->getSummary()->toString();
 }
 ```
 
