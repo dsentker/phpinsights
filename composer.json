@@ -4,10 +4,12 @@
     "require": {
         "php": "^5.4 || ^7.0",
         "netresearch/jsonmapper": "^1.1",
-        "guzzlehttp/guzzle": "^6.2",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
         "phpunit/phpunit": "^5.7"
     },
     "autoload": {
-        "psr-4": {"PhpInsights\\": "vendor/phpinsights/src"}
+        "psr-4": {"PhpInsights\\": "src"}
     }
 }
