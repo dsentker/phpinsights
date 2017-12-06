@@ -32,7 +32,8 @@ class InsightsResponse
      *
      * @throws InvalidJsonException
      */
-    public static function validateResponse($json) {
+    public static function validateResponse($json)
+    {
 
         $result = json_decode($json);
 

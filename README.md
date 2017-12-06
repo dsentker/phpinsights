@@ -11,9 +11,10 @@ An easy-to-use API Wrapper for [Googles PageSpeed Insights](https://developers.g
 
 ### Simple Usage
 ```php
-$uri = 'http://example.com';
+$url = 'http://example.com';
+
 $caller = new \PhpInsights\InsightsCaller('your-google-api-key-here', 'de');
-$response = $caller->getResponse($uri, \PhpInsights\InsightsCaller::STRATEGY_MOBILE);
+$response = $caller->getResponse($url, \PhpInsights\InsightsCaller::STRATEGY_MOBILE);
 $result = $response->getMappedResult();
 
 var_dump($result->getSpeedScore()); // 100 

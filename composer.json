@@ -1,6 +1,7 @@
 {
     "name": "dsentker/phpinsights",
     "description": "A php wrapper for Googles page speed insights",
+    "version": "0.2.2",
     "require": {
         "php": "^5.4 || ^7.0",
         "netresearch/jsonmapper": "^1.1",

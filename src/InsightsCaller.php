@@ -100,6 +100,7 @@ class InsightsCaller
     protected function createApiEndpointUrl($url, $strategy = 'mobile')
     {
         $screenshot = ($this->isCaptureScreenshot()) ? 'true' : 'false';
+
         return sprintf(self::GI_API_ENDPOINT, $url, $strategy, $this->apiKey, $this->locale, $screenshot);
     }
 

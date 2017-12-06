@@ -1,7 +1,6 @@
 <?php
 namespace PhpInsights\Result\Map;
 
-
 class Screenshot
 {
 

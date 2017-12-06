@@ -52,8 +52,8 @@ class FormattedResults
     public function getRuleResultsByGroup($group)
     {
         $results = [];
-        foreach($this->getRuleResults() as $rule => $ruleResult) {
-            if(in_array($group, $ruleResult->getGroups())) {
+        foreach ($this->getRuleResults() as $rule => $ruleResult) {
+            if (in_array($group, $ruleResult->getGroups())) {
                 $results[$rule] = $ruleResult;
             }
         }

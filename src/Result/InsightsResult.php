@@ -7,6 +7,7 @@ use PhpInsights\Result\Map\Screenshot;
 
 class InsightsResult
 {
+
     /** @var string */
     private $kind;
 
@@ -149,7 +150,7 @@ class InsightsResult
     {
         $ruleGroups = $this->getRuleGroups();
 
-        if(!array_key_exists(RuleGroup::GROUP_USABILITY, $ruleGroups)) {
+        if (!array_key_exists(RuleGroup::GROUP_USABILITY, $ruleGroups)) {
             throw new UsabilityScoreNotAvailableException('Usability score is only available with mobile strategy API call.');
         }
 
@@ -162,6 +163,7 @@ class InsightsResult
     public function getSpeedScore()
     {
         $ruleGroups = $this->getRuleGroups();
+
         return $ruleGroups[RuleGroup::GROUP_SPEED]->getScore();
 
     }
@@ -182,8 +184,8 @@ class InsightsResult
     public function getScreenshot()
     {
 
-        if(!$this->hasScreenshot()) {
-           ScreenshotNotAvailableException::raise();
+        if (!$this->hasScreenshot()) {
+            ScreenshotNotAvailableException::raise();
         }
 
         return $this->screenshot;
