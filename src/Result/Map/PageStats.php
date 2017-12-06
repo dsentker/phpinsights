@@ -24,7 +24,7 @@ class PageStats
     private $cssResponseBytes;
 
     /** @var int */
-    private $imageResponseTypes;
+    private $imageResponseBytes;
 
     /** @var int */
     private $javascriptResponseBytes;
@@ -137,17 +137,17 @@ class PageStats
     /**
      * @return int
      */
-    public function getImageResponseTypes()
+    public function getImageResponseBytes()
     {
-        return $this->imageResponseTypes;
+        return $this->imageResponseBytes;
     }
 
     /**
-     * @param int $imageResponseTypes
+     * @param int $imageResponseBytes
      */
-    public function setImageResponseTypes($imageResponseTypes)
+    public function setImageResponseBytes($imageResponseBytes)
     {
-        $this->imageResponseTypes = $imageResponseTypes;
+        $this->imageResponseBytes = $imageResponseBytes;
     }
 
     /**
