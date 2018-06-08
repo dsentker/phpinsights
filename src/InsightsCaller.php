@@ -2,6 +2,7 @@
 namespace PhpInsights;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Promise;
 use GuzzleHttp\Exception\TransferException;
 
 class InsightsCaller
@@ -71,6 +72,44 @@ class InsightsCaller
         }
 
         return InsightsResponse::fromResponse($response);
+
+    }
+
+    /**
+     * @param array $urls
+     * @param string $strategy
+     *
+     * @return InsightsResponse
+     *
+     * @throws ApiRequestException
+     */
+    public function getResponses(array $urls, $strategy = 'mobile')
+    {
+
+        try {
+            $promises = array();
+
+            foreach ($urls as $k=>$url) {
+                $apiEndpoint = $this->createApiEndpointUrl($url, $strategy);
+                $promises[$k] = $this->client->getAsync($apiEndpoint);
+            }
+
+            $results = Promise\unwrap($promises);
+            $results = Promise\settle($promises)->wait();
+
+            $responses = array();
+
+            foreach ($urls as $k=>$url) {
+                $response = $results[$k]['value'];
+                $responses[$url] = InsightsResponse::fromResponse($response);
+            }
+
+
+        } catch (TransferException $e) {
+            throw new ApiRequestException($e->getMessage());
+        }
+
+        return $responses;
 
     }
 
