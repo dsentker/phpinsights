@@ -32,7 +32,7 @@ $urls = array(
 $caller = new \PhpInsights\InsightsCaller('your-google-api-key-here', 'fr');
 $responses = $caller->getResponses($urls, \PhpInsights\InsightsCaller::STRATEGY_MOBILE);
 
-foreach ($responses as $url=>$response) {
+foreach ($responses as $url => $response) {
     $result = $response->getMappedResult();
 
     var_dump($result->getSpeedScore()); // 100 
