@@ -21,6 +21,25 @@ var_dump($result->getSpeedScore()); // 100
 var_dump($result->getUsabilityScore()); // 100 
 ```
 
+### Using Concurrent Requests
+```php
+$urls = array(
+    'http://example.com', 
+    'http://example2.com', 
+    'http://example3.com'
+);
+
+$caller = new \PhpInsights\InsightsCaller('your-google-api-key-here', 'fr');
+$responses = $caller->getResponses($urls, \PhpInsights\InsightsCaller::STRATEGY_MOBILE);
+
+foreach ($responses as $url=>$response) {
+    $result = $response->getMappedResult();
+
+    var_dump($result->getSpeedScore()); // 100 
+    var_dump($result->getUsabilityScore()); // 100 
+}
+```
+
 ### Result details
 #### Full result
 ```php
