@@ -85,6 +85,11 @@ print $result->screenshot->getData(); // base64 screenshot representation
 
 ## Credits
 * [Daniel Sentker](https://github.com/dsentker)
+* [Nils](https://github.com/nlzet)
+* [Joe Dawson](https://github.com/JoeDawson)
+* [tlafon](https://github.com/tlafon)
+
+
 
 ## Submitting bugs and feature requests
 Bugs and feature request are tracked on GitHub.
