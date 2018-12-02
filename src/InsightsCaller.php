@@ -31,10 +31,11 @@ class InsightsCaller
      *
      * @param string $apiKey
      * @param string $locale
+     * @param array $config
      */
-    public function __construct($apiKey, $locale = 'en')
+    public function __construct($apiKey, $locale = 'en', $config = array())
     {
-        $this->client = new Client();
+        $this->client = new Client($config);
         $this->apiKey = $apiKey;
         $this->locale = $locale;
         $this->captureScreenshot = true;
