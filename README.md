@@ -88,7 +88,7 @@ print $result->screenshot->getData(); // base64 screenshot representation
 * [Nils](https://github.com/nlzet)
 * [Joe Dawson](https://github.com/JoeDawson)
 * [tlafon](https://github.com/tlafon)
-
+* [baileyherbert](https://github.com/baileyherbert)
 
 
 ## Submitting bugs and feature requests
