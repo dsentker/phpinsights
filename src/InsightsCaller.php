@@ -12,7 +12,7 @@ class InsightsCaller
 
     const STRATEGY_DESKTOP = 'desktop';
 
-    const GI_API_ENDPOINT = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=%s&strategy=%s&key=%s&locale=%s&screenshot=%s';
+    const GI_API_ENDPOINT = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=%s&strategy=%s&key=%s&locale=%s&screenshot=%s';
 
     /** @var string */
     private $apiKey;
