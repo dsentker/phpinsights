@@ -1,5 +1,5 @@
 {
-    "name": "dsentker/phpinsights",
+    "name": "nightvis/phpinsights",
     "description": "A php wrapper for Googles page speed insights",
     "version": "0.2.5",
     "require": {
