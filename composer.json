@@ -3,7 +3,7 @@
     "description": "A php wrapper for Googles page speed insights",
     "version": "0.2.3",
     "require": {
-        "php": "^5.4 || ^7.0",
+        "php": "^7.0 || ^8.0",
         "netresearch/jsonmapper": "^1.1",
         "guzzlehttp/guzzle": "^6.2"
     },
